@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  hub:
+    image: selenium/hub
+    container_name: hub
+    ports:
+      - 4444:4444
+  chrome:
+    image: selenium/node-chrome
+    container_name: chrome-browser
+    ports:
+      - 5555:5555
+  firefox:
+    image: selenium/node-firefox
+    container_name: firefox-browser
+    ports:
+      - 6666:6666
